@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="main">
+        <!--No need to add sidebar here, directly display search results here only-->
+
+        <!-- show headline, description and image -->
+
+        <!-- let imgData = await fetch( `https://shrouded-earth-23381.herokuapp.com/api/search/?q=cricket` ); console.log(imgData); -->
+    </div>
+</body>
+
+</html>
+<script type="module">
+    let data = localStorage.getItem("input"); console.log(data); import { storeSearchterm, appendArticles } from "./scripts/search.js"; let imageData = await storeSearchterm( `https://shrouded-earth-23381.herokuapp.com/api/search/?q=${data}` ); console.log(imageData);
+    let main = document.querySelector("#main"); appendArticles(imageData, main);
+</script>
